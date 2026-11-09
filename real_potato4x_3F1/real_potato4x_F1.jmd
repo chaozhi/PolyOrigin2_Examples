@@ -1,0 +1,106 @@
+---
+title: Haplotype reconstruction for a real tetraploid potato pedigree
+author: Chaozhi Zheng
+---
+
+# Setup PolyOrigin
+
+For parallel computation
+```julia; eval = false
+using Distributed
+nprocs() < 7 && addprocs(7-nprocs()) 
+@info string("nworkers=", nworkers())
+@everywhere using PolyOrigin
+```
+Set four worker processes on local machine. See the manual
+of `addprocs` for launching worker processes via the specified cluster manager
+or on remote machines via SSH. The processers consist of  1 main and 6 wokers: 
+3 repated phasing runs for each of two chromsomes. 
+
+The last line makes PolyOrigin avaiable on all processes.  
+
+For non-parallel computation
+```julia
+using PolyOrigin
+```
+
+# Input files
+
+Set working directory to the direcotry of this file.
+```julia; results = "hidden"
+cd(@__DIR__)
+```
+
+Set input files
+```julia; results = "hidden";
+genofile = "TableS2_dose.csv"
+pedfile = "TableS3_ped.csv"
+```
+
+Check input files. In the pedfile, the parents of founders are set to 0.
+```julia
+using CSV, DataFrames
+show(CSV.read(pedfile,DataFrame)[1:8,:],eltypes=false)
+```
+In the genofile, columns 1-3 denote the marker map, and rest
+columns for the dosages of parents and offspring (NA denotes missing).
+```julia
+show(CSV.read(genofile,DataFrame)[1:5,1:5],eltypes=false)
+```
+
+plot pedigree for the 3x3 diallel cross.
+```julia
+polygeno = formpolygeno(genofile, pedfile; isphysmap=true,recomrate=1.25)
+PolyOrigin.plotdesign(polygeno.polyped)
+```
+
+run polyOrigin
+```julia; results = "hidden";
+chrsubset = 1:2
+outstem = "potato4x_F1_out"
+```
+```julia; results = "hidden"; eval=false
+@time phasedgeno, polyancestry, joinedancestry = polyorigin(genofile,pedfile;
+    isphysmap=true,
+    recomrate=1.25,
+    chrsubset,
+    isparallel=true,
+    outstem
+)
+```
+The keyargs `isphysmap`  and `recomrate` transform the input physical map (positions
+in base pairs) into genetic map with speficied constant recombation rate. `isparallel`
+specifies if computations are parallel among chromosomes, and `outstem`
+specifies the stem of output files.
+
+The returned polyancestry from `polyorigin` has been saved.
+```julia
+outfiles = filter(x->occursin(outstem,x), readdir())
+```
+[Click to view log file](potato4x_F1_out.log)
+
+
+# Visualize conditional probability
+
+```julia; results = "hidden";
+joinedancestry = PolyOrigin.readjoinedancestry(outstem*"_joinedancestry.csv.gz")
+```
+
+Visualize haplotype probabilities of single offspring
+```julia
+plotcondprob(joinedancestry,offspring=1)
+```
+
+# Evaluate estimated map
+
+Compare estimated map with input physical map
+```julia
+plotmapcomp(joinedancestry.markermap,
+    joinedancestry.markermap,
+    isphysmap = [true, false],
+    xlabel = "Physical poistion (Mbp)",
+    ylabel = "Estimated position (cM)",
+)
+```
+
+where r is kendall rank correlation for each chromsome.

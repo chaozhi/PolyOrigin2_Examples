@@ -1,0 +1,288 @@
+polyorigin, logfile=potato4x_F1_out.log, 2026-11-08T22:36:50
+≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡polyorigin≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+check genofile extension = .csv: VCF-format genofile is recommended
+check genofile existence: YES
+check pedfile extension = .csv: OK
+check pedfile existence: YES
+check samples allunique: YES
+check parents allunique: YES
+check parents: OK. All 3 parents = ["W6511-1R", "VillettaRose", "W9914-1R"] in pedfile are also in samples in genofile
+check offspring allunique: YES
+check offspring: OK. All 434 offspring in pedfile are also in samples in genofile
+check samples: OK. All 437 samples in genofile are also in pedfile
+Pass all checks for input genofile and pedfile
+Julia version: 1.13.3
+Status `C:\Users\zheng026\.julia\environments\v1.13\Project.toml`
+  [16de7d52] PolyOrigin v1.9.10 `c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin\`
+list of options: 
+genofile = TableS2_dose.csv
+pedfile = TableS3_ped.csv
+isphysmap = true
+recomrate = 1.25
+delimchar = ,
+missingstring = NA
+commentstring = ##
+================================polyorigin!=================================
+save design plot in c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato4x_3F1\potato4x_F1_out_plots\potato4x_F1_out_pedigree.png
+---------------------------------polyphase!---------------------------------
+list of option values: 
+chrsubset = 1:2
+markersubset = all markers
+chrpairing_phase = nothing
+byparent = nothing
+byneighbor = nothing
+bindis = 0.001cM
+isparentdoseerror = nothing
+iscorrectparent = nothing
+isinfererror = nothing
+tukeyfence = nothing
+doseerror = ErrorSetting("doseerror", true, Distributions.Beta{Float64}(α=1.0, β=9.0), 0.01, 0.05, 0.2)
+baseerror = ErrorSetting("baseerror", false, Distributions.Beta{Float64}(α=1.0, β=49.0), 0.001, 0.01, 0.05)
+allelicbias = ErrorSetting("allelicbias", true, Distributions.LogNormal{Float64}(μ=0.0, σ=1.0), 1, 2, 10)
+overdispersion = ErrorSetting("overdispersion", true, Distributions.Exponential{Float64}(θ=0.5), 0.0, 0.1, 1.0)
+isgreedy = false
+ismarkerspecific = nothing
+isdelvuong = false
+delsiglevel = 0.01
+maxstuck = 3
+maxiter = 50
+minrun = 3
+maxrun = 3
+runblocksize = 3
+refhapfile = nothing
+missingstring = NA
+isparallel = true(nworkers=6)
+isplot = true
+outstem = potato4x_F1_out
+outext = .vcf.gz
+logfile = IOStream(<file c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato4x_3F1\potato4x_F1_out.log>)
+workdir = c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato4x_3F1
+tempdirectory = C:\Users\zheng026\AppData\Local\Temp
+verbose = true
+#pop=3, #parent=3, #offspring=434, #chr=12, #marker=5078, genolen=898.6cM, physlen=718.9Mbp
+chrsubset=1:2
+reset isinfererror = true
+reset isparentdoseerror = true
+reset iscorrectparent = true
+reset byparent=false
+reset byneighbor=false
+reset chrpairing_phase=44
+reset tukeyfence = 3
+keywords in messages: 
+	#diff     ≡ #differences between proposal and current phasing
+	Δlogp     ≡ increase of log posterior
+	#stuck    ≡ measure of parental phasing being stuck
+	alwaysapt ≡ if true, always accept proposal phasing
+	byblock   ≡ if true, update parental phasing by blocks
+	#del_err  ≡ #deleted markers with too large error rates
+	#del_test ≡ #deleted markers via Vuong's test
+	tused     ≡ time (second) used by each sub-step in the iteration
+
+phasing 1 out of 1 components: 3 connected parents = W6511-1R, VillettaRose, W9914-1R
+goodparents = [1]
+randpartition1 = 2-3|1
+randpartition2 = 1|2|3
+prepare for multiple phasing runs, tused=0.4 seconds
+parallel phasing: chrls=[1, 2], run=1:3
+chr=1, run=1, #markers=718, parentformat=["GT_unphased"], offspringformat=["GT_unphased"], readpolygeno, tused=2.1s
+chr=1, run=1, targetls=["doseerror"], #fixedparents=0, doseerror=0.0088
+chr=1, run=1, it=1, #diff=1569/2154, Δlogp=479968.6, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0088, tused=122.8|0.1s
+chr=1, run=1, it=2, #diff=1106/2154, Δlogp=127417.5, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0088, tused=112.4|0.1s
+chr=1, run=1, it=3, #diff=165/2154, Δlogp=13614.4, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0088, tused=70.8|0.1s
+chr=1, run=1, it=4, #diff=22/2154, Δlogp=24.4, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0088, tused=56.5|0.1s
+chr=1, run=1, it=5, #diff=1/2154, Δlogp=204.1, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0088, tused=255.4|0.1s
+chr=1, run=1, it=6, #diff=0/2154, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=false, doseerror=0.0244, #correct=0, tused=44.3|9.2|7.3s
+chr=1, run=1, it=7, #diff=0/2154, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=true, #correct=0, tused=265.0|7.4s
+chr=1, run=1, doseerror.prior=Distributions.Beta{Float64}(α=1.0, β=9.0)
+chr=1, run=2, #markers=718, parentformat=["GT_unphased"], offspringformat=["GT_unphased"], readpolygeno, tused=2.2s
+chr=1, run=2, targetls=["doseerror"], #fixedparents=0, doseerror=0.0088
+chr=1, run=2, it=1, #diff=1516/2154, Δlogp=503488.8, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0088, tused=122.3|0.1s
+chr=1, run=2, it=2, #diff=987/2154, Δlogp=115011.9, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0088, tused=112.8|0.2s
+chr=1, run=2, it=3, #diff=193/2154, Δlogp=14772.1, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0088, tused=521.2|0.1s
+chr=1, run=2, it=4, #diff=58/2154, Δlogp=855.6, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0088, tused=62.3|0.1s
+chr=1, run=2, it=5, #diff=3/2154, Δlogp=211.0, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0088, tused=58.7|0.1s
+chr=1, run=2, it=6, #diff=3/2154, Δlogp=-211.0(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0244, #correct=0, tused=55.6|14.3|9.2s
+chr=1, run=2, it=7, #diff=0/2154, Δlogp=0.0(rej), #stuck=3, alwaysaccept=false, byblock=false, doseerror=0.0244, #correct=0, tused=255.4|13.7|7.3s
+chr=1, run=2, it=8, #diff=1/2154, Δlogp=7.2, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0245, tused=62.6|11.4s
+chr=1, run=2, it=9, #diff=0/2154, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=true, tused=50.7s
+chr=1, run=2, it=10, #diff=0/2154, Δlogp=0.0(rej), #stuck=4, alwaysaccept=false, byblock=true, tused=177.9s
+chr=1, run=2, doseerror.prior=Distributions.Beta{Float64}(α=1.0, β=9.0)
+chr=1, run=3, #markers=718, parentformat=["GT_unphased"], offspringformat=["GT_unphased"], readpolygeno, tused=2.1s
+chr=1, run=3, targetls=["doseerror"], #fixedparents=0, doseerror=0.0021
+chr=1, run=3, it=1, #diff=1543/2154, Δlogp=587259.7, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0021, tused=785.7|0.1s
+chr=1, run=3, it=2, #diff=1053/2154, Δlogp=108474.3, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0021, tused=653.3|0.1s
+chr=1, run=3, it=3, #diff=66/2154, Δlogp=7075.5, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0021, tused=38.3|0.1s
+chr=1, run=3, it=4, #diff=3/2154, Δlogp=925.8, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0021, tused=31.5|0.1s
+chr=1, run=3, it=5, #diff=2/2154, Δlogp=208.9, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0021, tused=139.5|0.0s
+chr=1, run=3, it=6, #diff=1/2154, Δlogp=40.3, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0021, tused=137.9|0.1s
+chr=1, run=3, it=7, #diff=2/2154, Δlogp=-8.2(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0243, #correct=0, tused=25.2|5.3|4.3s
+chr=1, run=3, it=8, #diff=1/2154, Δlogp=-171.6(rej), #stuck=2, alwaysaccept=false, byblock=false, doseerror=0.0246, #correct=0, tused=158.0|6.4|3.8s
+chr=1, run=3, it=9, #diff=1/2154, Δlogp=16.4, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0245, tused=23.8|6.9s
+chr=1, run=3, it=10, #diff=9/2154, Δlogp=-223.6(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0245, tused=24.1|7.0s
+chr=1, run=3, it=11, #diff=0/2154, Δlogp=0.0(rej), #stuck=3, alwaysaccept=false, byblock=false, doseerror=0.0245, tused=182.7|7.5s
+chr=1, run=3, it=12, #diff=1/2154, Δlogp=9.4, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0246, tused=36.9|6.4s
+chr=1, run=3, it=13, #diff=0/2154, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=true, tused=202.5s
+chr=1, run=3, it=14, #diff=0/2154, Δlogp=0.0(rej), #stuck=4, alwaysaccept=false, byblock=true, tused=29.1s
+chr=1, run=3, doseerror.prior=Distributions.Beta{Float64}(α=1.0, β=9.0)
+chr=2, run=1, #markers=513, parentformat=["GT_unphased"], offspringformat=["GT_unphased"], readpolygeno, tused=2.4s
+chr=2, run=1, targetls=["doseerror"], #fixedparents=0, doseerror=0.0074
+chr=2, run=1, it=1, #diff=1152/1539, Δlogp=355379.8, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0074, tused=84.1|0.1s
+chr=2, run=1, it=2, #diff=1004/1539, Δlogp=81465.8, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0074, tused=689.4|0.1s
+chr=2, run=1, it=3, #diff=781/1539, Δlogp=20403.3, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0074, tused=72.8|0.1s
+chr=2, run=1, it=4, #diff=289/1539, Δlogp=13247.3, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0074, tused=44.4|0.1s
+chr=2, run=1, it=5, #diff=1/1539, Δlogp=76.1, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0074, tused=31.4|0.0s
+chr=2, run=1, it=6, #diff=2/1539, Δlogp=33.5, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0074, tused=163.7|0.1s
+chr=2, run=1, it=7, #diff=0/1539, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=false, doseerror=0.0209, #correct=0, tused=155.3|10.1|5.6s
+chr=2, run=1, it=8, #diff=0/1539, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=true, #correct=0, tused=37.0|4.3s
+chr=2, run=1, doseerror.prior=Distributions.Beta{Float64}(α=1.0, β=9.0)
+chr=2, run=2, #markers=513, parentformat=["GT_unphased"], offspringformat=["GT_unphased"], readpolygeno, tused=2.4s
+chr=2, run=2, targetls=["doseerror"], #fixedparents=0, doseerror=0.0063
+chr=2, run=2, it=1, #diff=1166/1539, Δlogp=351393.5, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0063, tused=84.5|0.1s
+chr=2, run=2, it=2, #diff=793/1539, Δlogp=107465.9, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0063, tused=79.6|0.1s
+chr=2, run=2, it=3, #diff=282/1539, Δlogp=15202.4, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0063, tused=53.7|0.1s
+chr=2, run=2, it=4, #diff=0/1539, Δlogp=0.0, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0063, tused=147.5|0.1s
+chr=2, run=2, it=5, #diff=0/1539, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=true, doseerror=0.0209, #correct=0, tused=160.8|9.9|5.8s
+chr=2, run=2, doseerror.prior=Distributions.Beta{Float64}(α=1.0, β=9.0)
+chr=2, run=3, #markers=513, parentformat=["GT_unphased"], offspringformat=["GT_unphased"], readpolygeno, tused=2.5s
+chr=2, run=3, targetls=["doseerror"], #fixedparents=0, doseerror=0.0048
+chr=2, run=3, it=1, #diff=1120/1539, Δlogp=425290.8, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0048, tused=718.4|0.0s
+chr=2, run=3, it=2, #diff=626/1539, Δlogp=25937.7, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0048, tused=78.0|0.1s
+chr=2, run=3, it=3, #diff=384/1539, Δlogp=27964.6, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0048, tused=63.9|0.1s
+chr=2, run=3, it=4, #diff=204/1539, Δlogp=4295.5, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0048, tused=36.4|0.1s
+chr=2, run=3, it=5, #diff=2/1539, Δlogp=42.2, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0048, tused=166.5|0.1s
+chr=2, run=3, it=6, #diff=0/1539, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=false, doseerror=0.0209, #correct=0, tused=31.8|10.1|6.4s
+chr=2, run=3, it=7, #diff=0/1539, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=true, #correct=0, tused=161.3|4.8s
+chr=2, run=3, doseerror.prior=Distributions.Beta{Float64}(α=1.0, β=9.0)
+tused =2537.3s for phasing runs = ["1_runs1-3", "2_runs1-3"]
+chr=1, done, parents = all, nphaseerr(run1 ~ runs) = [0, 3, 9], npermerr = [0, 6, 12], ndel = [0, 0, 0]
+	logl = [-61431.31, -61461.33, -61535.47], logp = [-64388.72, -64418.98, -64493.33]
+chr=2, done, parents = none, nphaseerr(run3 ~ runs) = [0, 0, 0], npermerr = [0, 0, 0], ndel = [0, 0, 0]
+	logl = [-39367.25, -39367.19, -39366.61], logp = [-41473.45, -41473.39, -41472.78]
+tused=2538.9s for all phasing runs, logp sum =-105861.49, logp perchr = [-64388.72, -41472.78]
+parentphased file: potato4x_F1_out_phased.vcf.gz
+End, 2026-11-08T23:19:15, tused = 2539.9 seconds by polyphase!
+----------------------------------------------------------------------------
+--------------------------------polyrefine!---------------------------------
+list of option values: 
+chrpairing = 44
+chrsubset = all chromosomes
+markersubset = all markers
+byneighbor = false
+bindis = 0.001cM
+isdelvuong = false
+delsiglevel = 0.01
+isrefineorder = false
+isrefinedis = nothing
+isinfererror = nothing
+tukeyfence = nothing
+iscorrectparent = nothing
+doseerror = ErrorSetting("doseerror", true, Distributions.Beta{Float64}(α=1.0, β=9.0), 0.01, 0.05, 0.2)
+baseerror = ErrorSetting("baseerror", false, Distributions.Beta{Float64}(α=1.0, β=49.0), 0.001, 0.01, 0.05)
+allelicbias = ErrorSetting("allelicbias", true, Distributions.LogNormal{Float64}(μ=0.0, σ=1.0), 1, 2, 10)
+overdispersion = ErrorSetting("overdispersion", true, Distributions.Exponential{Float64}(θ=0.5), 0.0, 0.1, 1.0)
+maxwinsize = 50
+inittemperature = 4
+coolingrate = 0.5
+stripdis = 20cM
+skeletonsize = 100
+isparallel = true
+isplot = true
+outstem = potato4x_F1_out
+outext = .vcf.gz
+logfile = IOStream(<file c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato4x_3F1\potato4x_F1_out.log>)
+workdir = c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato4x_3F1
+verbose = true
+verbosemore = false
+#pop=3, #parent=3, #offspring=434, #chr=2, #marker=1231, genolen=168.0cM, physlen=134.4Mbp
+reset isrefinedis = true
+reset isinfererror = true
+reset tukeyfence = 3
+reset iscorrectparent = true
+chr=1, reset doseerror.prior = Distributions.Beta{Float64}(α=1.0, β=40.0)
+chr=1, it=0, <doseerror>=0.0244, len=110.4cM, logl=-61431.3
+chr=1, it=1, <doseerror>=0.0164, #del_err=40, #correct=0, len=263.8cM, logl=-45010.7, tused=39.1s
+chr=1, it=2, <doseerror>=0.0135, #del_err=17, #correct=0, len=204.6cM, logl=-41970.7, tused=35.4s
+chr=1, it=3, <doseerror>=0.0131, #del_err=9, len=213.0cM, logl=-40678.3, tused=31.1s
+chr=1, it=4, <doseerror>=0.013, #del_err=1, len=211.1cM, logl=-40535.0, tused=30.7s
+chr=1, it=5, <doseerror>=0.0128, #del_err=2, len=211.9cM, logl=-40277.4, tused=23.2s
+chr=1, it=6, <doseerror>=0.0127, #del_err=1, len=211.8cM, logl=-40147.1, tused=22.7s
+chr=1, it=7, <doseerror>=0.0127, #del_err=0, len=211.5cM, logl=-40146.2, tused=22.2s
+chr=1, it=8, #skeleton=100, <doseerror>=0.0043, len=139.2cM, tused=2.4s
+chr=1, it=9, #skeleton=100, <doseerror>=0.0052, len=151.1cM, tused=2.4s
+chr=1, it=10, #skeleton=100, <doseerror>=0.0049, len=147.7cM, tused=2.1s
+chr=1, it=11, #skeleton=100, <doseerror>=0.0049, len=148.4cM, tused=2.4s
+chr=1, it=12, #skeleton=100, <doseerror>=0.0049, len=148.2cM, tused=2.3s
+chr=1, it=13, #skeleton=100, <doseerror>=0.0049, len=148.3cM, tused=3.3s
+chr=1, done, elapsed=230.0seconds, len=148.3cM, #marker=648
+chr=2, reset doseerror.prior = Distributions.Beta{Float64}(α=1.0, β=46.9)
+chr=2, it=0, <doseerror>=0.0209, len=57.6cM, logl=-39366.6
+chr=2, it=1, <doseerror>=0.0146, #del_err=22, #correct=0, len=180.5cM, logl=-30512.1, tused=26.3s
+chr=2, it=2, <doseerror>=0.0123, #del_err=2, #correct=0, len=144.8cM, logl=-29927.0, tused=24.0s
+chr=2, it=3, <doseerror>=0.0123, #del_err=0, len=150.0cM, logl=-29905.5, tused=21.4s
+chr=2, it=4, <doseerror>=0.0123, #del_err=0, len=149.4cM, logl=-29901.4, tused=22.2s
+chr=2, it=5, <doseerror>=0.0123, #del_err=0, len=149.5cM, logl=-29900.8, tused=22.1s
+chr=2, it=6, #skeleton=100, <doseerror>=0.0054, len=104.6cM, tused=3.5s
+chr=2, it=7, #skeleton=100, <doseerror>=0.0062, len=113.6cM, tused=3.4s
+chr=2, it=8, #skeleton=100, <doseerror>=0.006, len=111.3cM, tused=3.4s
+chr=2, it=9, #skeleton=100, <doseerror>=0.0061, len=111.8cM, tused=3.7s
+chr=2, it=10, #skeleton=100, <doseerror>=0.006, len=111.7cM, tused=3.8s
+chr=2, it=11, #skeleton=100, <doseerror>=0.006, len=111.8cM, tused=3.5s
+chr=2, done, elapsed=147.0seconds, len=111.8cM, #marker=489
+tused=231.4s for all chromosomes
+delete 94 out of 1231 markers: PotVar0001921, PotVar0002101, PotVar0002132, PotVar0002716, PotVar0002800, PotVar0002935, PotVar0006198, PotVar0009827, PotVar0009844, PotVar0010106, PotVar0010184, PotVar0028899, PotVar0028973, PotVar0029119, PotVar0029143, PotVar0029278, PotVar0033498, PotVar0033736, PotVar0039273, PotVar0041409, PotVar0041618, PotVar0044985, PotVar0045340, PotVar0046221, PotVar0046462, PotVar0050584, PotVar0050585, PotVar0060678, PotVar0061043, PotVar0061095, PotVar0061197, PotVar0071575, PotVar0071738, PotVar0081045, PotVar0099629, PotVar0099774, PotVar0102233, PotVar0115989, PotVar0126146, PotVar0134709, solcap_snp_c1_10926, solcap_snp_c1_12118, solcap_snp_c1_12375, solcap_snp_c1_13290, solcap_snp_c1_14853, solcap_snp_c1_1853, solcap_snp_c1_2484, solcap_snp_c1_2520, solcap_snp_c1_3901, solcap_snp_c1_4763, solcap_snp_c1_730, solcap_snp_c1_7412, solcap_snp_c2_11591, solcap_snp_c2_12094, solcap_snp_c2_14609, solcap_snp_c2_14750, solcap_snp_c2_16409, solcap_snp_c2_17192, solcap_snp_c2_17193, solcap_snp_c2_17809, solcap_snp_c2_20065, solcap_snp_c2_20910, solcap_snp_c2_21078, solcap_snp_c2_21098, solcap_snp_c2_21099, solcap_snp_c2_21216, solcap_snp_c2_22105, solcap_snp_c2_2215, solcap_snp_c2_22890, solcap_snp_c2_2451, solcap_snp_c2_2464, solcap_snp_c2_2497, solcap_snp_c2_2506, solcap_snp_c2_32334, solcap_snp_c2_32359, solcap_snp_c2_38721, solcap_snp_c2_41927, solcap_snp_c2_42128, solcap_snp_c2_47202, solcap_snp_c2_48568, solcap_snp_c2_4896, solcap_snp_c2_51805, solcap_snp_c2_54581, solcap_snp_c2_56392, solcap_snp_c2_56498, solcap_snp_c2_57185, solcap_snp_c2_6990, solcap_snp_c2_7009, solcap_snp_c2_7056, solcap_snp_c2_7246, solcap_snp_c2_7306, solcap_snp_c2_9765, solcap_snp_c2_9970, solcap_snp_c2_9988
+#pop=3, #parent=3, #offspring=434, #chr=2, #marker=1137, genolen=260.1cM, physlen=134.4Mbp
+refined genofile: potato4x_F1_out_maprefined.vcf.gz
+mapcomp file: potato4x_F1_out_plots\potato4x_F1_out_polyrefine_mapcomp.png
+End, 2026-11-08T23:23:07, tused = 231.9 seconds by polyrefine!
+----------------------------------------------------------------------------
+------------------------------polyreconstruct!------------------------------
+list of option values: 
+doseerror = 0.01
+baseerror = 0.001
+chrpairing = 44
+chrsubset = all chromosomes
+markersubset = all markers
+bindis = 0.001cM
+iscorrectparent = true
+isimputefirst = true (reconstruct using imputed offspring)
+isparallel = nothing
+isparallelind = nothing
+missingstring = NA
+isplot = true
+nplot_subpop = 1
+tukeyfence = 3
+samplesize = 1000
+trueorigfile = nothing
+outstem = potato4x_F1_out
+outext = .vcf.gz
+logfile = IOStream(<file c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato4x_3F1\potato4x_F1_out.log>)
+workdir = c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato4x_3F1
+tempdirectory = C:\Users\zheng026\AppData\Local\Temp
+verbose = true
+#pop=3, #parent=3, #offspring=434, #chr=2, #marker=1137, genolen=260.1cM, physlen=134.4Mbp
+reset isparallel=true
+reset isparallelind=false
+chr=1, #markers=648, <doseerror>=0.0127, tused=85.8s, #correct=0
+chr=2, #markers=489, <doseerror>=0.0123, tused=54.5s, #correct=0
+tused=87.3s for all 2 chromosomes
+imputed genofile: potato4x_F1_out_imputed.vcf.gz
+Warn: 3 outlier offspring: W15268-67R, W15268-132R, W15267-38R
+phased genofile: potato4x_F1_out_phased.vcf.gz
+valentsummary file: potato4x_F1_out_chrpairing.csv
+valentformation plot: potato4x_F1_out_valent_formation.png
+valentfreq plot: potato4x_F1_out_valent_freq.png
+prefpairing plot: potato4x_F1_out_valent_prefpairing.png
+double reduction plot: potato4x_F1_out_valent_DR.png
+nrecom file: potato4x_F1_out_nrecom.csv
+posterior_nrecom plot: potato4x_F1_out_posterior_nrecom.png
+polyancestry file: potato4x_F1_out_polyancestry.csv.gz
+it might take a while to produce joinedancestry!
+tused = 13.2s
+joinedancestry file: potato4x_F1_out_joinedancestry.csv.gz
+End, 2026-11-08T23:25:17, tused = 129.4 seconds by polyreconstruct!
+----------------------------------------------------------------------------
+tarplotfile: potato4x_F1_out_plots.tar
+End, 2026-11-08T23:25:17, tused = 2901.7 seconds by polyorigin!
+============================================================================
+End, 2026-11-08T23:25:17, tused = 2906.9 seconds by polyorigin
+≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡

@@ -1,0 +1,296 @@
+polyorigin, logfile=potato2x_out.log, 2026-11-07T19:34:28
+≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡polyorigin≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+check genofile extension = .vcf.gz: OK
+check genofile existence: YES
+check pedfile extension = .csv: OK
+check pedfile existence: YES
+check samples allunique: YES
+check parents allunique: YES
+check parents: OK. All 60 parents = ["CO99076-6R-DH02", "CO99076-6R-DH03", "CO99076-6R-DH04", "CO99076-6R-DH07", "CO99076-6R-DH33", "Lelah-DH12", "RioColorado-DH03", "W12078-76-DH202", "W12078-76-DH333", "W12078-76-DH99", "W13058-4-DH02", "W13069-5-DH26", "W13069-5-DH88", "W15263-50R-DH01", "W15263-50R-DH02", "W15263-50R-DH11", "W15263-50R-DH12", "W15263-50R-DH14", "W8890-1R-DH30", "W8890-1R-DH33", "W9426-3R-DH05", "W9426-3R-DH41", "XD3-1-36", "W2x001-22", "W2x001-84", "W2x011-23", "W2x001-22-45", "W2x082-14", "W2x082-20", "W2x082-105", "W2x083-20", "W2x089-51", "W2x082-(14/20)-13", "W2x082-(14/20)-24", "W2x113-3", "W2x113-4", "W2x113-8", "W2x113-3-4", "W2x113-3-7", "W2x132-24", "W2x134-7", "W2x135-14", "W2x140-6", "W2x149-16", "W2x149-31", "W2x151-16", "W2x151-77", "W2x133-33", "W2x141-9", "W2x145-34", "W2x132-26", "W2x144-5", "W2x139-8", "W2x132-31", "W2x133-17", "W2x144-36", "W2x149-16-22", "W2x149-31-6", "W2x149-31-5", "W2x149-31-24"] in pedfile are also in samples in genofile
+check offspring allunique: YES
+check offspring: OK. All 1207 offspring in pedfile are also in samples in genofile
+check samples: OK. All 1267 samples in genofile are also in pedfile
+Pass all checks for input genofile and pedfile
+Julia version: 1.13.3
+Status `C:\Users\zheng026\.julia\environments\v1.13\Project.toml`
+  [16de7d52] PolyOrigin v1.9.10 `c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin\`
+list of options: 
+genofile = potato2x_geno.vcf.gz
+pedfile = potato2x_ped.csv
+isphysmap = true
+recomrate = 1.7
+delimchar = ,
+missingstring = NA
+commentstring = ##
+================================polyorigin!=================================
+save design plot in c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato2x_ped\potato2x_out_plots\potato2x_out_pedigree.png
+---------------------------------polyphase!---------------------------------
+list of option values: 
+chrsubset = 1:2
+markersubset = all markers
+chrpairing_phase = nothing
+byparent = nothing
+byneighbor = nothing
+bindis = 0.001cM
+isparentdoseerror = nothing
+iscorrectparent = nothing
+isinfererror = nothing
+tukeyfence = nothing
+doseerror = ErrorSetting("doseerror", true, Distributions.Beta{Float64}(α=1.0, β=9.0), 0.01, 0.05, 0.2)
+baseerror = ErrorSetting("baseerror", false, Distributions.Beta{Float64}(α=1.0, β=49.0), 0.001, 0.01, 0.05)
+allelicbias = ErrorSetting("allelicbias", true, Distributions.LogNormal{Float64}(μ=0.0, σ=1.0), 1, 2, 10)
+overdispersion = ErrorSetting("overdispersion", true, Distributions.Exponential{Float64}(θ=0.5), 0.0, 0.1, 1.0)
+isgreedy = false
+ismarkerspecific = nothing
+isdelvuong = false
+delsiglevel = 0.01
+maxstuck = 3
+maxiter = 50
+minrun = 3
+maxrun = 3
+runblocksize = 3
+refhapfile = nothing
+missingstring = NA
+isparallel = true(nworkers=6)
+isplot = true
+outstem = potato2x_out
+outext = .vcf.gz
+logfile = IOStream(<file c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato2x_ped\potato2x_out.log>)
+workdir = c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato2x_ped
+tempdirectory = C:\Users\zheng026\AppData\Local\Temp
+verbose = true
+#pop=82, #founder=23, #midparent=37, #offspring=1207, #chr=12, #marker=1890, genolen=1212.7cM, physlen=713.3Mbp
+chrsubset=1:2
+reset isinfererror = true
+reset isparentdoseerror = true
+reset iscorrectparent = true
+reset byparent=false
+reset byneighbor=false
+reset tukeyfence = 3
+keywords in messages: 
+	#diff     ≡ #differences between proposal and current phasing
+	Δlogp     ≡ increase of log posterior
+	#stuck    ≡ measure of parental phasing being stuck
+	alwaysapt ≡ if true, always accept proposal phasing
+	byblock   ≡ if true, update parental phasing by blocks
+	#del_err  ≡ #deleted markers with too large error rates
+	#del_test ≡ #deleted markers via Vuong's test
+	tused     ≡ time (second) used by each sub-step in the iteration
+
+phasing 1 out of 1 components: 60 connected parents = CO99076-6R-DH02, CO99076-6R-DH03, CO99076-6R-DH04, CO99076-6R-DH07, CO99076-6R-DH33, Lelah-DH12, RioColorado-DH03, W12078-76-DH202, W12078-76-DH333, W12078-76-DH99, W13058-4-DH02, W13069-5-DH26, W13069-5-DH88, W15263-50R-DH01, W15263-50R-DH02, W15263-50R-DH11, W15263-50R-DH12, W15263-50R-DH14, W8890-1R-DH30, W8890-1R-DH33, W9426-3R-DH05, W9426-3R-DH41, XD3-1-36, W2x001-22, W2x001-84, W2x011-23, W2x001-22-45, W2x082-14, W2x082-20, W2x082-105, W2x083-20, W2x089-51, W2x082-(14/20)-13, W2x082-(14/20)-24, W2x113-3, W2x113-4, W2x113-8, W2x113-3-4, W2x113-3-7, W2x132-24, W2x134-7, W2x135-14, W2x140-6, W2x149-16, W2x149-31, W2x151-16, W2x151-77, W2x133-33, W2x141-9, W2x145-34, W2x132-26, W2x144-5, W2x139-8, W2x132-31, W2x133-17, W2x144-36, W2x149-16-22, W2x149-31-6, W2x149-31-5, W2x149-31-24
+goodparents = [9, 11, 23, 24, 25, 33, 34, 35, 49, 52, 58]
+randpartition1 = 33|27|45|49|25|12|9|35|24|2|13|8|26|14|3|11|23|1|48|5|16|15|10|4|6|7|19|42|20|59|40|22|18|17|34|21|44|52|31|28-29|53|30|43|32|41|36|47|39|37|38|56|46|58|55|50|51|60|54|57
+randpartition2 = 33|27|45|49|25|12|9|35|24|2|13|8|26|14|3|11|23|1|5|48|16|15|10|4|6|7|19|42|20|59|22|40|18|17|34|44|21|52|31|28-29|53|30|43|32|41|36|47|39|37|38|56|46|58|55|50|51|60|54|57
+randpartition3 = 33|26-27|45|49|25|12|9|35|24|2|13|8|14|3|11|23|1|5|48|16|15|10|4|6|7|42|19|20|59|40|22|18|17|34|21|44|52|31|28-29|30|53|43|32|41|36|47|39|37|38|56|46|58|55|50|51|60|54|57
+randpartition4 = 33|27|45|49|25|12|9|35|24|2|13|8|26|14|3|11|23|1|48|5|16|15|10|4|6|7|42|19|20|59|22|40|18|17|34|44|21|52|31|28-29|53|30|43|32|41|36|47|39|37|38|56|46|58|55|50|51|60|54|57
+randpartition5 = 33|26-27|45|49|25|12|9|35|24|2|13|8|14|3|11|23|1|48|5|16|15|10|4|6|7|42|19|20|59|40|22|18|17|34|44|21|52|31|28-29|53|30|43|32|41|36|47|39|37|38|56|46|58|55|50|51|60|54|57
+prepare for multiple phasing runs, tused=8.6 seconds
+parallel phasing: chrls=[1, 2], run=1:3
+chr=chr01, run=1, #markers=219, parentformat=["GT_unphased"], offspringformat=["GT_unphased"], readpolygeno, tused=21.5s
+chr=chr01, run=1, targetls=["doseerror"], #fixedparents=0, doseerror=0.0073
+chr=chr01, run=1, it=1, #diff=2637/13140, Δlogp=224767.6, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0073, tused=47.6|0.5s
+chr=chr01, run=1, it=2, #diff=170/13140, Δlogp=8826.0, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0073, tused=13.4|0.2s
+chr=chr01, run=1, it=3, #diff=43/13140, Δlogp=17.2, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0073, tused=7.4|0.2s
+chr=chr01, run=1, it=4, #diff=19/13140, Δlogp=231.7, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0073, tused=7.4|0.2s
+chr=chr01, run=1, it=5, #diff=49/13140, Δlogp=-231.7(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0027, #correct=0, tused=7.2|10.1|18.1s
+chr=chr01, run=1, it=6, #diff=30/13140, Δlogp=-613.3(rej), #stuck=2, alwaysaccept=false, byblock=false, doseerror=0.0027, #correct=0, tused=8.4|9.3|2.0s
+chr=chr01, run=1, it=7, #diff=27/13140, Δlogp=7.6, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0027, tused=7.4|9.4s
+chr=chr01, run=1, it=8, #diff=9/13140, Δlogp=-620.9(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0027, tused=7.6|9.1s
+chr=chr01, run=1, it=9, #diff=0/13140, Δlogp=0.0(rej), #stuck=3, alwaysaccept=false, byblock=false, doseerror=0.0027, tused=7.3|8.9s
+chr=chr01, run=1, it=10, #diff=0/13140, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=true, tused=11.9s
+chr=chr01, run=1, doseerror.prior=Distributions.Beta{Float64}(α=1.0, β=9.0)
+chr=chr01, run=2, #markers=219, parentformat=["GT_unphased"], offspringformat=["GT_unphased"], readpolygeno, tused=21.3s
+chr=chr01, run=2, targetls=["doseerror"], #fixedparents=0, doseerror=0.0074
+chr=chr01, run=2, it=1, #diff=2608/13140, Δlogp=228073.0, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0074, tused=47.4|0.5s
+chr=chr01, run=2, it=2, #diff=213/13140, Δlogp=8083.1, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0074, tused=13.3|0.2s
+chr=chr01, run=2, it=3, #diff=62/13140, Δlogp=648.7, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0074, tused=7.5|0.2s
+chr=chr01, run=2, it=4, #diff=21/13140, Δlogp=322.6, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0074, tused=7.5|0.3s
+chr=chr01, run=2, it=5, #diff=31/13140, Δlogp=-322.7(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0028, #correct=0, tused=7.1|10.2|18.2s
+chr=chr01, run=2, it=6, #diff=54/13140, Δlogp=-90.3(rej), #stuck=2, alwaysaccept=false, byblock=false, doseerror=0.0028, #correct=0, tused=8.5|9.3|2.1s
+chr=chr01, run=2, it=7, #diff=51/13140, Δlogp=11.1, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0027, tused=7.6|10.3s
+chr=chr01, run=2, it=8, #diff=33/13140, Δlogp=-101.6(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0027, tused=8.1|9.1s
+chr=chr01, run=2, it=9, #diff=3/13140, Δlogp=-2.8(rej), #stuck=2, alwaysaccept=false, byblock=false, doseerror=0.0027, tused=7.2|8.8s
+chr=chr01, run=2, it=10, #diff=32/13140, Δlogp=-101.6(rej), #stuck=3, alwaysaccept=false, byblock=false, doseerror=0.0027, tused=6.2|8.1s
+chr=chr01, run=2, it=11, #diff=0/13140, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=true, tused=11.2s
+chr=chr01, run=2, it=12, #diff=0/13140, Δlogp=0.0(rej), #stuck=4, alwaysaccept=false, byblock=true, tused=9.3s
+chr=chr01, run=2, doseerror.prior=Distributions.Beta{Float64}(α=1.0, β=9.0)
+chr=chr01, run=3, #markers=219, parentformat=["GT_unphased"], offspringformat=["GT_unphased"], readpolygeno, tused=21.7s
+chr=chr01, run=3, targetls=["doseerror"], #fixedparents=0, doseerror=0.0016
+chr=chr01, run=3, it=1, #diff=2563/13140, Δlogp=242865.6, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0016, tused=47.8|0.5s
+chr=chr01, run=3, it=2, #diff=289/13140, Δlogp=8821.7, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0016, tused=13.3|0.2s
+chr=chr01, run=3, it=3, #diff=83/13140, Δlogp=1286.0, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0016, tused=7.4|0.2s
+chr=chr01, run=3, it=4, #diff=55/13140, Δlogp=-542.9(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0047, #correct=0, tused=7.3|10.5|17.6s
+chr=chr01, run=3, it=5, #diff=28/13140, Δlogp=6.1, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0047, #correct=0, tused=8.4|10.1|1.8s
+chr=chr01, run=3, it=6, #diff=18/13140, Δlogp=-531.8(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0047, tused=7.3|9.9s
+chr=chr01, run=3, it=7, #diff=32/13140, Δlogp=-0.0(rej), #stuck=2, alwaysaccept=false, byblock=false, doseerror=0.0047, tused=7.3|10.0s
+chr=chr01, run=3, it=8, #diff=40/13140, Δlogp=-531.8(rej), #stuck=3, alwaysaccept=false, byblock=false, doseerror=0.0047, tused=7.3|10.1s
+chr=chr01, run=3, it=9, #diff=1/13140, Δlogp=0.1, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0047, tused=12.7|8.5s
+chr=chr01, run=3, it=10, #diff=23/13140, Δlogp=0.0, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0047, tused=10.8|7.9s
+chr=chr01, run=3, it=11, #diff=0/13140, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=true, tused=9.3s
+chr=chr01, run=3, it=12, #diff=0/13140, Δlogp=0.0(rej), #stuck=4, alwaysaccept=false, byblock=true, tused=8.6s
+chr=chr01, run=3, doseerror.prior=Distributions.Beta{Float64}(α=1.0, β=9.0)
+chr=chr02, run=1, #markers=175, parentformat=["GT_unphased"], offspringformat=["GT_unphased"], readpolygeno, tused=21.5s
+chr=chr02, run=1, targetls=["doseerror"], #fixedparents=0, doseerror=0.0099
+chr=chr02, run=1, it=1, #diff=2075/10500, Δlogp=180212.2, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0099, tused=46.4|0.5s
+chr=chr02, run=1, it=2, #diff=105/10500, Δlogp=6228.8, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0099, tused=11.9|0.2s
+chr=chr02, run=1, it=3, #diff=35/10500, Δlogp=219.2, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0099, tused=6.2|0.2s
+chr=chr02, run=1, it=4, #diff=34/10500, Δlogp=53.4, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0099, tused=5.9|0.2s
+chr=chr02, run=1, it=5, #diff=44/10500, Δlogp=-62.7(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0033, #correct=0, tused=6.0|10.4|17.2s
+chr=chr02, run=1, it=6, #diff=8/10500, Δlogp=1.8, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0032, #correct=0, tused=6.8|8.2|1.5s
+chr=chr02, run=1, it=7, #diff=17/10500, Δlogp=-16.7(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0032, tused=6.8|7.6s
+chr=chr02, run=1, it=8, #diff=0/10500, Δlogp=-0.0(rej), #stuck=3, alwaysaccept=false, byblock=false, doseerror=0.0032, tused=5.8|7.7s
+chr=chr02, run=1, it=9, #diff=2/10500, Δlogp=8.7, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0032, tused=11.8|7.5s
+chr=chr02, run=1, it=10, #diff=0/10500, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=true, tused=9.7s
+chr=chr02, run=1, it=11, #diff=0/10500, Δlogp=0.0(rej), #stuck=4, alwaysaccept=false, byblock=true, tused=8.9s
+chr=chr02, run=1, doseerror.prior=Distributions.Beta{Float64}(α=1.0, β=9.0)
+chr=chr02, run=2, #markers=175, parentformat=["GT_unphased"], offspringformat=["GT_unphased"], readpolygeno, tused=21.5s
+chr=chr02, run=2, targetls=["doseerror"], #fixedparents=0, doseerror=0.0081
+chr=chr02, run=2, it=1, #diff=2062/10500, Δlogp=176181.4, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0081, tused=46.3|0.4s
+chr=chr02, run=2, it=2, #diff=206/10500, Δlogp=8692.0, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0081, tused=11.8|0.2s
+chr=chr02, run=2, it=3, #diff=24/10500, Δlogp=-30.4, #stuck=1, alwaysaccept=true, byblock=false, doseerror=0.0081, tused=6.1|0.2s
+chr=chr02, run=2, it=4, #diff=24/10500, Δlogp=30.4, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0081, tused=6.0|0.2s
+chr=chr02, run=2, it=5, #diff=34/10500, Δlogp=-39.7(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0032, #correct=0, tused=5.7|10.4|17.2s
+chr=chr02, run=2, it=6, #diff=6/10500, Δlogp=-8.6(rej), #stuck=2, alwaysaccept=false, byblock=false, doseerror=0.0032, #correct=0, tused=6.5|7.4|1.4s
+chr=chr02, run=2, it=7, #diff=9/10500, Δlogp=-15.9(rej), #stuck=3, alwaysaccept=false, byblock=false, doseerror=0.0032, tused=6.0|7.5s
+chr=chr02, run=2, it=8, #diff=5/10500, Δlogp=1.8, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0031, tused=12.2|8.1s
+chr=chr02, run=2, it=9, #diff=0/10500, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=true, tused=10.3s
+chr=chr02, run=2, it=10, #diff=0/10500, Δlogp=0.0(rej), #stuck=4, alwaysaccept=false, byblock=true, tused=10.1s
+chr=chr02, run=2, doseerror.prior=Distributions.Beta{Float64}(α=1.0, β=9.0)
+chr=chr02, run=3, #markers=175, parentformat=["GT_unphased"], offspringformat=["GT_unphased"], readpolygeno, tused=21.6s
+chr=chr02, run=3, targetls=["doseerror"], #fixedparents=0, doseerror=0.0078
+chr=chr02, run=3, it=1, #diff=2017/10500, Δlogp=179097.1, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0078, tused=46.6|0.5s
+chr=chr02, run=3, it=2, #diff=142/10500, Δlogp=5450.2, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0078, tused=11.9|0.2s
+chr=chr02, run=3, it=3, #diff=30/10500, Δlogp=134.0, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0078, tused=6.2|0.2s
+chr=chr02, run=3, it=4, #diff=29/10500, Δlogp=917.8, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0078, tused=6.0|0.2s
+chr=chr02, run=3, it=5, #diff=36/10500, Δlogp=-67.8(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0035, #correct=0, tused=5.9|9.2|17.3s
+chr=chr02, run=3, it=6, #diff=5/10500, Δlogp=-9.2(rej), #stuck=2, alwaysaccept=false, byblock=false, doseerror=0.0035, #correct=0, tused=6.6|7.5|1.5s
+chr=chr02, run=3, it=7, #diff=10/10500, Δlogp=-15.5(rej), #stuck=3, alwaysaccept=false, byblock=false, doseerror=0.0035, tused=6.1|7.7s
+chr=chr02, run=3, it=8, #diff=2/10500, Δlogp=1.3, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0035, tused=12.2|7.5s
+chr=chr02, run=3, it=9, #diff=0/10500, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=true, tused=9.6s
+chr=chr02, run=3, it=10, #diff=0/10500, Δlogp=0.0(rej), #stuck=4, alwaysaccept=false, byblock=true, tused=10.2s
+chr=chr02, run=3, doseerror.prior=Distributions.Beta{Float64}(α=1.0, β=9.0)
+tused =320.2s for phasing runs = ["chr01_runs1-3", "chr02_runs1-3"]
+chr=chr01, done, parents = 4|5|7|9|12|14|16|17|20|24|25|27|30|31|33|38|39|48|49|53|54|56|57|58|59, nphaseerr(run1 ~ runs) = [0, 4, 47], npermerr = [0, 2, 66], ndel = [0, 0, 0]
+	logl = [-20574.47, -20573.6, -24056.2], logp = [-24490.49, -24507.3, -28034.38]
+chr=chr02, done, parents = 7|9|12|24|25|43|51|55, nphaseerr(run2 ~ runs) = [8, 0, 15], npermerr = [12, 0, 13], ndel = [0, 0, 0]
+	logl = [-15178.32, -15001.8, -15439.71], logp = [-18347.06, -18157.56, -18638.33]
+tused=341.4s for all phasing runs, logp sum =-42648.05, logp perchr = [-24490.49, -18157.56]
+parentphased file: potato2x_out_phased.vcf.gz
+End, 2026-11-07T19:41:29, tused = 364.3 seconds by polyphase!
+----------------------------------------------------------------------------
+--------------------------------polyrefine!---------------------------------
+list of option values: 
+chrpairing = 44
+chrsubset = all chromosomes
+markersubset = all markers
+byneighbor = false
+bindis = 0.001cM
+isdelvuong = false
+delsiglevel = 0.01
+isrefineorder = false
+isrefinedis = nothing
+isinfererror = nothing
+tukeyfence = nothing
+iscorrectparent = nothing
+doseerror = ErrorSetting("doseerror", true, Distributions.Beta{Float64}(α=1.0, β=9.0), 0.01, 0.05, 0.2)
+baseerror = ErrorSetting("baseerror", false, Distributions.Beta{Float64}(α=1.0, β=49.0), 0.001, 0.01, 0.05)
+allelicbias = ErrorSetting("allelicbias", true, Distributions.LogNormal{Float64}(μ=0.0, σ=1.0), 1, 2, 10)
+overdispersion = ErrorSetting("overdispersion", true, Distributions.Exponential{Float64}(θ=0.5), 0.0, 0.1, 1.0)
+maxwinsize = 50
+inittemperature = 4
+coolingrate = 0.5
+stripdis = 20cM
+skeletonsize = 100
+isparallel = true
+isplot = true
+outstem = potato2x_out
+outext = .vcf.gz
+logfile = IOStream(<file c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato2x_ped\potato2x_out.log>)
+workdir = c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato2x_ped
+verbose = true
+verbosemore = false
+#pop=82, #founder=23, #midparent=37, #offspring=1207, #chr=2, #marker=394, genolen=209.0cM, physlen=122.9Mbp
+reset isrefinedis = true
+reset isinfererror = true
+reset tukeyfence = 3
+reset iscorrectparent = true
+chr=chr01, reset doseerror.prior = Distributions.Beta{Float64}(α=1.0, β=99.0)
+chr=chr01, it=0, <doseerror>=0.0027, len=149.6cM, logl=-20574.5
+chr=chr01, it=1, <doseerror>=0.0031, #del_err=1, #correct=0, len=119.0cM, logl=-17199.6, tused=26.4s
+chr=chr01, it=2, <doseerror>=0.0033, #del_err=0, #correct=0, len=106.1cM, logl=-17093.4, tused=15.5s
+chr=chr01, it=3, <doseerror>=0.0033, #del_err=0, len=106.9cM, logl=-17086.7, tused=14.0s
+chr=chr01, it=4, <doseerror>=0.0033, #del_err=0, len=106.6cM, logl=-17084.2, tused=13.5s
+chr=chr01, it=5, <doseerror>=0.0033, #del_err=0, len=106.6cM, logl=-17083.3, tused=13.6s
+chr=chr01, it=6, #skeleton=100, <doseerror>=0.0017, len=104.3cM, tused=6.3s
+chr=chr01, it=7, #skeleton=100, <doseerror>=0.0017, len=105.7cM, tused=5.7s
+chr=chr01, it=8, #skeleton=100, <doseerror>=0.0017, len=105.9cM, tused=5.6s
+chr=chr01, it=9, #skeleton=100, <doseerror>=0.0017, len=105.8cM, tused=5.7s
+chr=chr01, it=10, #skeleton=100, <doseerror>=0.0017, len=105.8cM, tused=5.4s
+chr=chr01, done, elapsed=120.0seconds, len=105.8cM, #marker=218
+chr=chr02, reset doseerror.prior = Distributions.Beta{Float64}(α=1.0, β=99.0)
+chr=chr02, it=0, <doseerror>=0.0031, len=59.4cM, logl=-15001.8
+chr=chr02, it=1, <doseerror>=0.0023, #del_err=3, #correct=0, len=83.1cM, logl=-11942.2, tused=24.1s
+chr=chr02, it=2, <doseerror>=0.0023, #del_err=0, #correct=0, len=70.8cM, logl=-11892.8, tused=11.9s
+chr=chr02, it=3, <doseerror>=0.0023, #del_err=0, len=73.4cM, logl=-11887.7, tused=11.0s
+chr=chr02, it=4, <doseerror>=0.0023, #del_err=0, len=72.7cM, logl=-11885.2, tused=10.7s
+chr=chr02, it=5, <doseerror>=0.0023, #del_err=0, len=72.8cM, logl=-11884.5, tused=10.7s
+chr=chr02, it=6, #skeleton=100, <doseerror>=0.0012, len=71.6cM, tused=5.9s
+chr=chr02, it=7, #skeleton=100, <doseerror>=0.0012, len=71.8cM, tused=6.0s
+chr=chr02, it=8, #skeleton=100, <doseerror>=0.0012, len=71.6cM, tused=6.2s
+chr=chr02, it=9, #skeleton=100, <doseerror>=0.0012, len=71.6cM, tused=6.0s
+chr=chr02, done, elapsed=101.0seconds, len=71.6cM, #marker=172
+tused=126.6s for all chromosomes
+delete 4 out of 394 markers: PotVar0119007, solcap_snp_c1_12382, solcap_snp_c1_4752, solcap_snp_c2_30164
+#pop=82, #founder=23, #midparent=37, #offspring=1207, #chr=2, #marker=390, genolen=177.4cM, physlen=122.9Mbp
+refined genofile: potato2x_out_maprefined.vcf.gz
+mapcomp file: potato2x_out_plots\potato2x_out_polyrefine_mapcomp.png
+End, 2026-11-07T19:43:45, tused = 136.3 seconds by polyrefine!
+----------------------------------------------------------------------------
+------------------------------polyreconstruct!------------------------------
+list of option values: 
+doseerror = 0.01
+baseerror = 0.001
+chrpairing = 44
+chrsubset = all chromosomes
+markersubset = all markers
+bindis = 0.001cM
+iscorrectparent = true
+isimputefirst = true (reconstruct using imputed offspring)
+isparallel = nothing
+isparallelind = nothing
+missingstring = NA
+isplot = true
+nplot_subpop = 1
+tukeyfence = 3
+samplesize = 100
+trueorigfile = nothing
+outstem = potato2x_out
+outext = .vcf.gz
+logfile = IOStream(<file c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato2x_ped\potato2x_out.log>)
+workdir = c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato2x_ped
+tempdirectory = C:\Users\zheng026\AppData\Local\Temp
+verbose = true
+#pop=82, #founder=23, #midparent=37, #offspring=1207, #chr=2, #marker=390, genolen=177.4cM, physlen=122.9Mbp
+reset isparallel=true
+reset isparallelind=false
+chr=chr01, #markers=218, <doseerror>=0.0033, tused=8.7s, #correct=0
+chr=chr01, #markers=218, midparent decoding, tused=0.9s
+chr=chr02, #markers=172, <doseerror>=0.0023, tused=7.6s, #correct=0
+chr=chr02, #markers=172, midparent decoding, tused=0.9s
+tused=14.8s for all 2 chromosomes
+imputed genofile: potato2x_out_imputed.vcf.gz
+no outlier offspring
+phased genofile: potato2x_out_phased.vcf.gz
+nrecom file: potato2x_out_nrecom.csv
+posterior_nrecom plot: potato2x_out_posterior_nrecom.png
+polyancestry file: potato2x_out_polyancestry.csv.gz
+it might take a while to produce joinedancestry!
+tused = 45.3s
+joinedancestry file: potato2x_out_joinedancestry.csv.gz
+End, 2026-11-07T19:46:22, tused = 154.0 seconds by polyreconstruct!
+----------------------------------------------------------------------------
+tarplotfile: potato2x_out_plots.tar
+End, 2026-11-07T19:46:22, tused = 685.0 seconds by polyorigin!
+============================================================================
+End, 2026-11-07T19:46:22, tused = 714.3 seconds by polyorigin
+≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡

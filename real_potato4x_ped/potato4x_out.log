@@ -1,0 +1,343 @@
+polyorigin, logfile=potato4x_out.log, 2026-11-08T21:46:02
+≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡polyorigin≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
+check genofile extension = .vcf.gz: OK
+check genofile existence: YES
+check pedfile extension = .csv: OK
+check pedfile existence: YES
+check samples allunique: YES
+check parents allunique: YES
+check parents: OK. All 16 parents = ["NY166", "NY169", "W12078-76", "W13NYP102-7", "W14184-5", "W14NYQ4-1", "W14NYQ9-2", "W15NYR11-13", "W17039-31", "W6609-3", "W19012-12", "W19012-28", "W19024-22", "W19026-1", "W19026-18", "W19028-17"] in pedfile are also in samples in genofile
+check offspring allunique: YES
+check offspring: OK. All 730 offspring in pedfile are also in samples in genofile
+check samples: OK. All 746 samples in genofile are also in pedfile
+Pass all checks for input genofile and pedfile
+Julia version: 1.13.3
+Status `C:\Users\zheng026\.julia\environments\v1.13\Project.toml`
+  [16de7d52] PolyOrigin v1.9.10 `c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin\`
+list of options: 
+genofile = potato4x_geno.vcf.gz
+pedfile = potato4x_ped.csv
+isphysmap = true
+recomrate = 1.25
+delimchar = ,
+missingstring = NA
+commentstring = ##
+================================polyorigin!=================================
+save design plot in c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato4x_ped\potato4x_out_plots\potato4x_out_pedigree.png
+---------------------------------polyphase!---------------------------------
+list of option values: 
+chrsubset = 1:2
+markersubset = all markers
+chrpairing_phase = nothing
+byparent = nothing
+byneighbor = nothing
+bindis = 0.001cM
+isparentdoseerror = nothing
+iscorrectparent = nothing
+isinfererror = nothing
+tukeyfence = nothing
+doseerror = ErrorSetting("doseerror", true, Distributions.Beta{Float64}(α=1.0, β=9.0), 0.01, 0.05, 0.2)
+baseerror = ErrorSetting("baseerror", false, Distributions.Beta{Float64}(α=1.0, β=49.0), 0.001, 0.01, 0.05)
+allelicbias = ErrorSetting("allelicbias", true, Distributions.LogNormal{Float64}(μ=0.0, σ=1.0), 1, 2, 10)
+overdispersion = ErrorSetting("overdispersion", true, Distributions.Exponential{Float64}(θ=0.5), 0.0, 0.1, 1.0)
+isgreedy = false
+ismarkerspecific = nothing
+isdelvuong = false
+delsiglevel = 0.01
+maxstuck = 3
+maxiter = 50
+minrun = 3
+maxrun = 3
+runblocksize = 3
+refhapfile = nothing
+missingstring = NA
+isparallel = true(nworkers=6)
+isplot = true
+outstem = potato4x_out
+outext = .vcf.gz
+logfile = IOStream(<file c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato4x_ped\potato4x_out.log>)
+workdir = c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato4x_ped
+tempdirectory = C:\Users\zheng026\AppData\Local\Temp
+verbose = true
+#pop=27, #founder=10, #midparent=6, #offspring=730, #chr=12, #marker=1347, genolen=887.7cM, physlen=710.2Mbp
+chrsubset=1:2
+reset isinfererror = true
+reset isparentdoseerror = true
+reset iscorrectparent = true
+reset byparent=false
+reset byneighbor=false
+reset chrpairing_phase=44
+reset tukeyfence = 3
+keywords in messages: 
+	#diff     ≡ #differences between proposal and current phasing
+	Δlogp     ≡ increase of log posterior
+	#stuck    ≡ measure of parental phasing being stuck
+	alwaysapt ≡ if true, always accept proposal phasing
+	byblock   ≡ if true, update parental phasing by blocks
+	#del_err  ≡ #deleted markers with too large error rates
+	#del_test ≡ #deleted markers via Vuong's test
+	tused     ≡ time (second) used by each sub-step in the iteration
+
+phasing 1 out of 1 components: 16 connected parents = NY166, NY169, W12078-76, W13NYP102-7, W14184-5, W14NYQ4-1, W14NYQ9-2, W15NYR11-13, W17039-31, W6609-3, W19012-12, W19012-28, W19024-22, W19026-1, W19026-18, W19028-17
+goodparents = [1, 2, 3, 4, 6, 7, 8, 10, 16]
+randpartition1 = 8|6|7|2|10|1|3|4|16|5|9|15|13|11|14|12
+prepare for multiple phasing runs, tused=4.1 seconds
+parallel phasing: chrls=[1, 2], run=1:3
+chr=chr01, run=1, #markers=143, parentformat=["AD&GT"], offspringformat=["AD"], readpolygeno, tused=12.7s
+chr=chr01, run=1, targetls=["doseerror", "allelicbias", "overdispersion"], #fixedparents=0, doseerror=0.0079, <allelicbias>=1.0, overdispersion=0.0
+chr=chr01, run=1, it=1, #diff=1306/2288, Δlogp=129445.8, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0079, <allelicbias>=0.99, overdispersion=0.007, #large_err=2, tused=64.6|26.1s
+chr=chr01, run=1, it=2, #diff=245/2288, Δlogp=15038.8, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0079, <allelicbias>=1.0, overdispersion=0.006, #large_err=2, tused=31.9|24.8s
+chr=chr01, run=1, it=3, #diff=120/2288, Δlogp=2815.0, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0079, <allelicbias>=1.0, overdispersion=0.007, #large_err=2, tused=24.2|23.1s
+chr=chr01, run=1, it=4, #diff=93/2288, Δlogp=-423.4, #stuck=1, alwaysaccept=true, byblock=false, doseerror=0.0079, <allelicbias>=1.0, overdispersion=0.007, #large_err=2, tused=22.1|23.7s
+chr=chr01, run=1, it=5, #diff=70/2288, Δlogp=575.0, #stuck=1, alwaysaccept=true, byblock=false, doseerror=0.0079, <allelicbias>=1.0, overdispersion=0.007, #large_err=2, tused=22.0|24.1s
+chr=chr01, run=1, it=6, #diff=18/2288, Δlogp=1.1, #stuck=1, alwaysaccept=true, byblock=false, doseerror=0.0079, <allelicbias>=1.0, overdispersion=0.007, #large_err=2, tused=22.2|24.8s
+chr=chr01, run=1, it=7, #diff=48/2288, Δlogp=-290.8(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0282, <allelicbias>=1.0, overdispersion=0.006, #del_err=2, #correct=1(rejected), tused=26.5|38.5|22.0s
+chr=chr01, run=1, it=8, #diff=11/2256, Δlogp=-21.9(rej), #stuck=2, alwaysaccept=false, byblock=false, doseerror=0.0292, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, #correct=1(rejected), tused=24.9|38.6|3.9s
+chr=chr01, run=1, it=9, #diff=31/2256, Δlogp=269.5, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0295, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, tused=24.8|38.4s
+chr=chr01, run=1, it=10, #diff=25/2256, Δlogp=33.0, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0293, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, tused=25.4|39.4s
+chr=chr01, run=1, it=11, #diff=11/2256, Δlogp=30.5, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0293, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, tused=25.7|39.0s
+chr=chr01, run=1, it=12, #diff=9/2256, Δlogp=-33.7(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0293, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, tused=23.8|39.7s
+chr=chr01, run=1, it=13, #diff=15/2256, Δlogp=-222.3(rej), #stuck=2, alwaysaccept=false, byblock=false, doseerror=0.0292, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, tused=24.5|40.0s
+chr=chr01, run=1, it=14, #diff=11/2256, Δlogp=-75.9(rej), #stuck=3, alwaysaccept=false, byblock=false, doseerror=0.0294, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, tused=23.6|38.3s
+chr=chr01, run=1, it=15, #diff=5/2256, Δlogp=8.4, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0292, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, tused=39.1|40.0s
+chr=chr01, run=1, it=16, #diff=1/2256, Δlogp=0.1, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0292, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, tused=35.1|33.0s
+chr=chr01, run=1, it=17, #diff=0/2256, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=true, tused=24.7s
+chr=chr01, run=1, it=18, #diff=0/2256, Δlogp=0.0(rej), #stuck=4, alwaysaccept=false, byblock=true, tused=24.3s
+chr=chr01, run=1, doseerror.prior=Distributions.Beta{Float64}(α=1.0, β=9.0), allelicbias.prior=Distributions.LogNormal{Float64}(μ=-0.05672, σ=0.2997), overdispersion.prior=Distributions.Exponential{Float64}(θ=0.5)
+chr=chr01, run=2, #markers=143, parentformat=["AD&GT"], offspringformat=["AD"], readpolygeno, tused=12.4s
+chr=chr01, run=2, targetls=["doseerror", "allelicbias", "overdispersion"], #fixedparents=0, doseerror=0.0034, <allelicbias>=1.0, overdispersion=0.0
+chr=chr01, run=2, it=1, #diff=1319/2288, Δlogp=132305.4, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0034, <allelicbias>=0.98, overdispersion=0.007, #large_err=2, tused=67.0|27.1s
+chr=chr01, run=2, it=2, #diff=330/2288, Δlogp=21087.8, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0034, <allelicbias>=1.0, overdispersion=0.007, #large_err=2, tused=34.4|25.0s
+chr=chr01, run=2, it=3, #diff=83/2288, Δlogp=1796.5, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0034, <allelicbias>=1.0, overdispersion=0.007, #large_err=2, tused=24.2|23.5s
+chr=chr01, run=2, it=4, #diff=78/2288, Δlogp=77.1, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0034, <allelicbias>=1.0, overdispersion=0.007, #large_err=2, tused=22.6|24.6s
+chr=chr01, run=2, it=5, #diff=71/2288, Δlogp=-3.3, #stuck=1, alwaysaccept=true, byblock=false, doseerror=0.0034, <allelicbias>=0.99, overdispersion=0.007, #large_err=2, tused=22.3|24.1s
+chr=chr01, run=2, it=6, #diff=40/2288, Δlogp=125.5, #stuck=1, alwaysaccept=true, byblock=false, doseerror=0.0034, <allelicbias>=0.99, overdispersion=0.007, #large_err=2, tused=23.0|27.9s
+chr=chr01, run=2, it=7, #diff=54/2288, Δlogp=-381.6, #stuck=2, alwaysaccept=true, byblock=false, doseerror=0.0034, <allelicbias>=1.0, overdispersion=0.007, #large_err=2, tused=26.7|27.6s
+chr=chr01, run=2, it=8, #diff=80/2288, Δlogp=346.4, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0034, <allelicbias>=1.0, overdispersion=0.007, #large_err=2, tused=25.8|27.7s
+chr=chr01, run=2, it=9, #diff=88/2288, Δlogp=-13.7(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0268, <allelicbias>=1.0, overdispersion=0.006, #del_err=2, #correct=1(rejected), tused=27.3|39.6|22.2s
+chr=chr01, run=2, it=10, #diff=43/2256, Δlogp=86.9, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0286, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, #correct=2(rejected), tused=25.8|37.9|4.7s
+chr=chr01, run=2, it=11, #diff=22/2256, Δlogp=459.6, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0293, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, tused=26.1|38.4s
+chr=chr01, run=2, it=12, #diff=15/2256, Δlogp=-241.5(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0293, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, tused=25.0|39.8s
+chr=chr01, run=2, it=13, #diff=21/2256, Δlogp=-265.1(rej), #stuck=2, alwaysaccept=false, byblock=false, doseerror=0.0293, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, tused=24.7|39.6s
+chr=chr01, run=2, it=14, #diff=15/2256, Δlogp=-194.6(rej), #stuck=3, alwaysaccept=false, byblock=false, doseerror=0.0293, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, tused=24.6|39.5s
+chr=chr01, run=2, it=15, #diff=7/2256, Δlogp=19.2, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0293, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, tused=40.2|38.7s
+chr=chr01, run=2, it=16, #diff=1/2256, Δlogp=7.7, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0292, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, tused=34.7|34.0s
+chr=chr01, run=2, it=17, #diff=1/2256, Δlogp=3.0, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0294, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, tused=29.0|29.3s
+chr=chr01, run=2, it=18, #diff=0/2256, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=true, tused=23.5s
+chr=chr01, run=2, it=19, #diff=0/2256, Δlogp=0.0(rej), #stuck=4, alwaysaccept=false, byblock=true, tused=18.0s
+chr=chr01, run=2, doseerror.prior=Distributions.Beta{Float64}(α=1.0, β=9.0), allelicbias.prior=Distributions.LogNormal{Float64}(μ=-0.05582, σ=0.2971), overdispersion.prior=Distributions.Exponential{Float64}(θ=0.5)
+chr=chr01, run=3, #markers=143, parentformat=["AD&GT"], offspringformat=["AD"], readpolygeno, tused=12.4s
+chr=chr01, run=3, targetls=["doseerror", "allelicbias", "overdispersion"], #fixedparents=0, doseerror=0.0024, <allelicbias>=1.0, overdispersion=0.0
+chr=chr01, run=3, it=1, #diff=1327/2288, Δlogp=131053.9, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0024, <allelicbias>=0.98, overdispersion=0.007, #large_err=2, tused=67.2|27.8s
+chr=chr01, run=3, it=2, #diff=322/2288, Δlogp=21179.8, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0024, <allelicbias>=0.99, overdispersion=0.007, #large_err=2, tused=34.5|24.3s
+chr=chr01, run=3, it=3, #diff=129/2288, Δlogp=2662.3, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0024, <allelicbias>=0.99, overdispersion=0.007, #large_err=2, tused=23.6|24.3s
+chr=chr01, run=3, it=4, #diff=76/2288, Δlogp=384.5, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0024, <allelicbias>=0.99, overdispersion=0.007, #large_err=2, tused=22.6|24.7s
+chr=chr01, run=3, it=5, #diff=36/2288, Δlogp=-35.3, #stuck=1, alwaysaccept=true, byblock=false, doseerror=0.0024, <allelicbias>=0.99, overdispersion=0.007, #large_err=2, tused=21.7|24.5s
+chr=chr01, run=3, it=6, #diff=27/2288, Δlogp=37.3, #stuck=1, alwaysaccept=true, byblock=false, doseerror=0.0024, <allelicbias>=0.99, overdispersion=0.007, #large_err=2, tused=22.3|29.0s
+chr=chr01, run=3, it=7, #diff=41/2288, Δlogp=-278.5, #stuck=2, alwaysaccept=true, byblock=false, doseerror=0.0024, <allelicbias>=0.99, overdispersion=0.007, #large_err=2, tused=26.2|27.5s
+chr=chr01, run=3, it=8, #diff=46/2288, Δlogp=342.1, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0024, <allelicbias>=0.99, overdispersion=0.007, #large_err=2, tused=26.2|28.3s
+chr=chr01, run=3, it=9, #diff=23/2288, Δlogp=6.2, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0024, <allelicbias>=0.99, overdispersion=0.007, #large_err=2, tused=25.9|28.4s
+chr=chr01, run=3, it=10, #diff=21/2288, Δlogp=58.5, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0024, <allelicbias>=0.99, overdispersion=0.007, #large_err=2, tused=25.6|28.7s
+chr=chr01, run=3, it=11, #diff=38/2288, Δlogp=-81.3(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0285, <allelicbias>=1.0, overdispersion=0.006, #del_err=2, #correct=1(rejected), tused=25.3|36.6|22.1s
+chr=chr01, run=3, it=12, #diff=22/2256, Δlogp=46.9, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0307, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, #correct=3(accepted), tused=25.7|37.0|4.2s
+chr=chr01, run=3, it=13, #diff=24/2256, Δlogp=96.9, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0315, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, #correct=2(rejected), tused=25.4|38.1|4.2s
+chr=chr01, run=3, it=14, #diff=15/2256, Δlogp=-129.0(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0316, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, #correct=2(rejected), tused=24.5|38.4|4.7s
+chr=chr01, run=3, it=15, #diff=13/2256, Δlogp=-163.4(rej), #stuck=2, alwaysaccept=false, byblock=false, doseerror=0.0315, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, tused=25.5|38.4s
+chr=chr01, run=3, it=16, #diff=16/2256, Δlogp=-209.0(rej), #stuck=3, alwaysaccept=false, byblock=false, doseerror=0.0314, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, tused=24.6|37.7s
+chr=chr01, run=3, it=17, #diff=5/2256, Δlogp=17.8, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0315, <allelicbias>=1.0, overdispersion=0.006, #del_err=0, tused=34.3|29.3s
+chr=chr01, run=3, it=18, #diff=0/2256, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=true, tused=25.8s
+chr=chr01, run=3, it=19, #diff=0/2256, Δlogp=0.0(rej), #stuck=4, alwaysaccept=false, byblock=true, tused=24.9s
+chr=chr01, run=3, doseerror.prior=Distributions.Beta{Float64}(α=1.0, β=9.0), allelicbias.prior=Distributions.LogNormal{Float64}(μ=-0.06147, σ=0.2944), overdispersion.prior=Distributions.Exponential{Float64}(θ=0.5)
+chr=chr02, run=1, #markers=126, parentformat=["AD&GT"], offspringformat=["AD"], readpolygeno, tused=12.5s
+chr=chr02, run=1, targetls=["doseerror", "allelicbias", "overdispersion"], #fixedparents=0, doseerror=0.005, <allelicbias>=1.0, overdispersion=0.0
+chr=chr02, run=1, it=1, #diff=1105/2016, Δlogp=115445.9, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.005, <allelicbias>=0.98, overdispersion=0.007, #large_err=0, tused=59.6|23.0s
+chr=chr02, run=1, it=2, #diff=232/2016, Δlogp=19689.0, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.005, <allelicbias>=0.98, overdispersion=0.007, #large_err=0, tused=27.1|19.3s
+chr=chr02, run=1, it=3, #diff=29/2016, Δlogp=280.8, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.005, <allelicbias>=0.98, overdispersion=0.007, #large_err=0, tused=18.9|20.7s
+chr=chr02, run=1, it=4, #diff=39/2016, Δlogp=1.2, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.005, <allelicbias>=0.98, overdispersion=0.007, #large_err=0, tused=17.7|21.2s
+chr=chr02, run=1, it=5, #diff=24/2016, Δlogp=270.2, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.005, <allelicbias>=0.98, overdispersion=0.007, #large_err=0, tused=18.4|20.2s
+chr=chr02, run=1, it=6, #diff=42/2016, Δlogp=761.8, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.005, <allelicbias>=0.98, overdispersion=0.007, #large_err=1, tused=18.7|19.7s
+chr=chr02, run=1, it=7, #diff=52/2016, Δlogp=548.6, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.005, <allelicbias>=0.98, overdispersion=0.007, #large_err=1, tused=17.9|19.3s
+chr=chr02, run=1, it=8, #diff=34/2016, Δlogp=-284.7(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0275, <allelicbias>=0.98, overdispersion=0.007, #del_err=1, #correct=2(rejected), tused=21.9|34.1|21.2s
+chr=chr02, run=1, it=9, #diff=30/2000, Δlogp=87.8, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0298, <allelicbias>=0.98, overdispersion=0.007, #del_err=0, #correct=2(rejected), tused=21.6|30.6|3.8s
+chr=chr02, run=1, it=10, #diff=20/2000, Δlogp=-183.1(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0302, <allelicbias>=0.98, overdispersion=0.007, #del_err=0, tused=21.8|33.4s
+chr=chr02, run=1, it=11, #diff=6/2000, Δlogp=77.0, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0302, <allelicbias>=0.98, overdispersion=0.007, #del_err=0, tused=21.1|33.7s
+chr=chr02, run=1, it=12, #diff=16/2000, Δlogp=-91.6(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0301, <allelicbias>=0.98, overdispersion=0.007, #del_err=0, tused=21.6|35.0s
+chr=chr02, run=1, it=13, #diff=3/2000, Δlogp=-1.9(rej), #stuck=2, alwaysaccept=false, byblock=false, doseerror=0.0301, <allelicbias>=0.98, overdispersion=0.007, #del_err=0, tused=21.1|34.5s
+chr=chr02, run=1, it=14, #diff=14/2000, Δlogp=-125.1(rej), #stuck=3, alwaysaccept=false, byblock=false, doseerror=0.0299, <allelicbias>=0.98, overdispersion=0.007, #del_err=0, tused=22.0|34.7s
+chr=chr02, run=1, it=15, #diff=5/2000, Δlogp=56.0, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0302, <allelicbias>=0.98, overdispersion=0.007, #del_err=0, tused=35.2|33.8s
+chr=chr02, run=1, it=16, #diff=1/2000, Δlogp=17.2, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0302, <allelicbias>=0.98, overdispersion=0.007, #del_err=0, tused=32.4|33.4s
+chr=chr02, run=1, it=17, #diff=2/2000, Δlogp=12.0, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0303, <allelicbias>=0.98, overdispersion=0.007, #del_err=0, tused=33.9|32.3s
+chr=chr02, run=1, it=18, #diff=0/2000, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=true, tused=28.3s
+chr=chr02, run=1, it=19, #diff=0/2000, Δlogp=0.0(rej), #stuck=4, alwaysaccept=false, byblock=true, tused=25.6s
+chr=chr02, run=1, doseerror.prior=Distributions.Beta{Float64}(α=1.0, β=9.0), allelicbias.prior=Distributions.LogNormal{Float64}(μ=-0.0483, σ=0.2602), overdispersion.prior=Distributions.Exponential{Float64}(θ=0.5)
+chr=chr02, run=2, #markers=126, parentformat=["AD&GT"], offspringformat=["AD"], readpolygeno, tused=12.3s
+chr=chr02, run=2, targetls=["doseerror", "allelicbias", "overdispersion"], #fixedparents=0, doseerror=0.009, <allelicbias>=1.0, overdispersion=0.0
+chr=chr02, run=2, it=1, #diff=1105/2016, Δlogp=117175.1, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.009, <allelicbias>=0.98, overdispersion=0.007, #large_err=0, tused=58.8|21.9s
+chr=chr02, run=2, it=2, #diff=282/2016, Δlogp=12982.9, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.009, <allelicbias>=0.98, overdispersion=0.007, #large_err=0, tused=25.8|19.6s
+chr=chr02, run=2, it=3, #diff=72/2016, Δlogp=287.5, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.009, <allelicbias>=0.97, overdispersion=0.007, #large_err=0, tused=19.7|20.3s
+chr=chr02, run=2, it=4, #diff=43/2016, Δlogp=12.3, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.009, <allelicbias>=0.98, overdispersion=0.007, #large_err=0, tused=18.2|20.8s
+chr=chr02, run=2, it=5, #diff=19/2016, Δlogp=250.8, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.009, <allelicbias>=0.97, overdispersion=0.007, #large_err=0, tused=18.1|20.0s
+chr=chr02, run=2, it=6, #diff=56/2016, Δlogp=-266.4(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0308, <allelicbias>=0.97, overdispersion=0.007, #del_err=0, #correct=3(rejected), tused=18.0|27.3|17.8s
+chr=chr02, run=2, it=7, #diff=12/2016, Δlogp=48.2, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0328, <allelicbias>=0.97, overdispersion=0.007, #del_err=0, #correct=3(rejected), tused=19.4|32.5|3.5s
+chr=chr02, run=2, it=8, #diff=24/2016, Δlogp=34.7, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0323, <allelicbias>=0.97, overdispersion=0.007, #del_err=0, tused=21.3|33.3s
+chr=chr02, run=2, it=9, #diff=35/2016, Δlogp=-52.0(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0321, <allelicbias>=0.97, overdispersion=0.007, #del_err=0, tused=20.3|34.1s
+chr=chr02, run=2, it=10, #diff=60/2016, Δlogp=-150.2(rej), #stuck=2, alwaysaccept=false, byblock=false, doseerror=0.0324, <allelicbias>=0.97, overdispersion=0.007, #del_err=0, tused=21.6|33.5s
+chr=chr02, run=2, it=11, #diff=22/2016, Δlogp=221.8, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0326, <allelicbias>=0.97, overdispersion=0.007, #del_err=0, tused=20.9|33.3s
+chr=chr02, run=2, it=12, #diff=39/2016, Δlogp=-188.7(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0328, <allelicbias>=0.97, overdispersion=0.007, #del_err=0, tused=21.6|33.8s
+chr=chr02, run=2, it=13, #diff=5/2016, Δlogp=-1.0(rej), #stuck=2, alwaysaccept=false, byblock=false, doseerror=0.033, <allelicbias>=0.97, overdispersion=0.007, #del_err=0, tused=21.6|33.6s
+chr=chr02, run=2, it=14, #diff=15/2016, Δlogp=-167.2(rej), #stuck=3, alwaysaccept=false, byblock=false, doseerror=0.0328, <allelicbias>=0.97, overdispersion=0.007, #del_err=0, tused=21.1|34.9s
+chr=chr02, run=2, it=15, #diff=2/2016, Δlogp=6.6, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0328, <allelicbias>=0.97, overdispersion=0.007, #del_err=0, tused=33.7|34.3s
+chr=chr02, run=2, it=16, #diff=4/2016, Δlogp=9.1, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0327, <allelicbias>=0.97, overdispersion=0.007, #del_err=0, tused=32.8|34.1s
+chr=chr02, run=2, it=17, #diff=1/2016, Δlogp=4.9, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0327, <allelicbias>=0.97, overdispersion=0.007, #del_err=0, tused=32.5|34.7s
+chr=chr02, run=2, it=18, #diff=0/2016, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=true, tused=27.4s
+chr=chr02, run=2, it=19, #diff=0/2016, Δlogp=0.0(rej), #stuck=4, alwaysaccept=false, byblock=true, tused=24.8s
+chr=chr02, run=2, doseerror.prior=Distributions.Beta{Float64}(α=1.0, β=9.0), allelicbias.prior=Distributions.LogNormal{Float64}(μ=-0.04053, σ=0.2388), overdispersion.prior=Distributions.Exponential{Float64}(θ=0.5)
+chr=chr02, run=3, #markers=126, parentformat=["AD&GT"], offspringformat=["AD"], readpolygeno, tused=12.2s
+chr=chr02, run=3, targetls=["doseerror", "allelicbias", "overdispersion"], #fixedparents=0, doseerror=0.0045, <allelicbias>=1.0, overdispersion=0.0
+chr=chr02, run=3, it=1, #diff=1108/2016, Δlogp=123746.0, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0045, <allelicbias>=0.98, overdispersion=0.007, #large_err=0, tused=59.9|22.7s
+chr=chr02, run=3, it=2, #diff=230/2016, Δlogp=11345.7, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0045, <allelicbias>=0.98, overdispersion=0.007, #large_err=0, tused=26.0|19.6s
+chr=chr02, run=3, it=3, #diff=40/2016, Δlogp=350.4, #stuck=0, alwaysaccept=true, byblock=false, doseerror=0.0045, <allelicbias>=0.98, overdispersion=0.007, #large_err=0, tused=18.5|20.2s
+chr=chr02, run=3, it=4, #diff=49/2016, Δlogp=-299.5, #stuck=1, alwaysaccept=true, byblock=false, doseerror=0.0045, <allelicbias>=0.98, overdispersion=0.007, #large_err=0, tused=17.4|21.1s
+chr=chr02, run=3, it=5, #diff=70/2016, Δlogp=2337.8, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0045, <allelicbias>=0.98, overdispersion=0.007, #large_err=1, tused=17.4|20.5s
+chr=chr02, run=3, it=6, #diff=11/2016, Δlogp=-252.9(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0272, <allelicbias>=0.98, overdispersion=0.007, #del_err=1, #correct=3(rejected), tused=17.6|30.3|17.5s
+chr=chr02, run=3, it=7, #diff=13/2000, Δlogp=25.1, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0297, <allelicbias>=0.98, overdispersion=0.007, #del_err=0, #correct=4(rejected), tused=19.1|31.9|3.8s
+chr=chr02, run=3, it=8, #diff=15/2000, Δlogp=-5.4(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0298, <allelicbias>=0.98, overdispersion=0.007, #del_err=0, tused=20.8|32.6s
+chr=chr02, run=3, it=9, #diff=13/2000, Δlogp=110.9, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0297, <allelicbias>=0.98, overdispersion=0.007, #del_err=0, tused=20.5|34.9s
+chr=chr02, run=3, it=10, #diff=8/2000, Δlogp=-185.4(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0298, <allelicbias>=0.98, overdispersion=0.007, #del_err=0, tused=20.9|33.1s
+chr=chr02, run=3, it=11, #diff=5/2000, Δlogp=30.7, #stuck=0, alwaysaccept=false, byblock=false, doseerror=0.0297, <allelicbias>=0.98, overdispersion=0.007, #del_err=0, tused=20.4|34.1s
+chr=chr02, run=3, it=12, #diff=14/2000, Δlogp=-205.4(rej), #stuck=1, alwaysaccept=false, byblock=false, doseerror=0.0297, <allelicbias>=0.98, overdispersion=0.007, #del_err=0, tused=21.1|34.3s
+chr=chr02, run=3, it=13, #diff=17/2000, Δlogp=-200.7(rej), #stuck=2, alwaysaccept=false, byblock=false, doseerror=0.0297, <allelicbias>=0.98, overdispersion=0.007, #del_err=0, tused=21.3|34.7s
+chr=chr02, run=3, it=14, #diff=16/2000, Δlogp=-189.1(rej), #stuck=3, alwaysaccept=false, byblock=false, doseerror=0.0297, <allelicbias>=0.98, overdispersion=0.007, #del_err=0, tused=21.3|34.8s
+chr=chr02, run=3, it=15, #diff=2/2000, Δlogp=1.5, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0295, <allelicbias>=0.98, overdispersion=0.007, #del_err=0, tused=34.3|35.2s
+chr=chr02, run=3, it=16, #diff=1/2000, Δlogp=2.5, #stuck=0, alwaysaccept=false, byblock=true, doseerror=0.0295, <allelicbias>=0.98, overdispersion=0.007, #del_err=0, tused=32.7|34.5s
+chr=chr02, run=3, it=17, #diff=0/2000, Δlogp=0.0(rej), #stuck=2, alwaysaccept=false, byblock=true, tused=28.8s
+chr=chr02, run=3, it=18, #diff=0/2000, Δlogp=0.0(rej), #stuck=4, alwaysaccept=false, byblock=true, tused=29.0s
+chr=chr02, run=3, doseerror.prior=Distributions.Beta{Float64}(α=1.0, β=9.0), allelicbias.prior=Distributions.LogNormal{Float64}(μ=-0.04968, σ=0.2592), overdispersion.prior=Distributions.Exponential{Float64}(θ=0.5)
+tused =1174.1s for phasing runs = ["chr01_runs1-3", "chr02_runs1-3"]
+chr=chr01, done, parents = 11|12|15, nphaseerr(run1 ~ runs) = [0, 10, 20], npermerr = [0, 4, 2], ndel = [2, 2, 2]
+	logl = [-383315.71, -383557.49, -384916.19], logp = [-386497.36, -386740.47, -388094.25]
+chr=chr02, done, parents = 4|6|11|16, nphaseerr(run3 ~ runs) = [32, 25, 0], npermerr = [3, 3, 0], ndel = [1, 0, 1]
+	logl = [-331146.58, -331656.9, -330669.64], logp = [-333852.22, -334359.95, -333357.72]
+tused=1187.8s for all phasing runs, logp sum =-719855.08, logp perchr = [-386497.36, -333357.72]
+delete 3 out of 269 markers: PotVar0072076, solcap_snp_c1_7964, solcap_snp_c2_49905
+parentphased file: potato4x_out_phased.vcf.gz
+End, 2026-11-08T22:06:31, tused = 1201.4 seconds by polyphase!
+----------------------------------------------------------------------------
+--------------------------------polyrefine!---------------------------------
+list of option values: 
+chrpairing = 44
+chrsubset = all chromosomes
+markersubset = all markers
+byneighbor = false
+bindis = 0.001cM
+isdelvuong = false
+delsiglevel = 0.01
+isrefineorder = false
+isrefinedis = nothing
+isinfererror = nothing
+tukeyfence = nothing
+iscorrectparent = nothing
+doseerror = ErrorSetting("doseerror", true, Distributions.Beta{Float64}(α=1.0, β=9.0), 0.01, 0.05, 0.2)
+baseerror = ErrorSetting("baseerror", false, Distributions.Beta{Float64}(α=1.0, β=49.0), 0.001, 0.01, 0.05)
+allelicbias = ErrorSetting("allelicbias", true, Distributions.LogNormal{Float64}(μ=0.0, σ=1.0), 1, 2, 10)
+overdispersion = ErrorSetting("overdispersion", true, Distributions.Exponential{Float64}(θ=0.5), 0.0, 0.1, 1.0)
+maxwinsize = 50
+inittemperature = 4
+coolingrate = 0.5
+stripdis = 20cM
+skeletonsize = 100
+isparallel = true
+isplot = true
+outstem = potato4x_out
+outext = .vcf.gz
+logfile = IOStream(<file c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato4x_ped\potato4x_out.log>)
+workdir = c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato4x_ped
+verbose = true
+verbosemore = false
+#pop=27, #founder=10, #midparent=6, #offspring=730, #chr=2, #marker=266, genolen=152.4cM, physlen=121.9Mbp
+reset isrefinedis = true
+reset isinfererror = true
+reset tukeyfence = 3
+reset iscorrectparent = true
+chr=chr01, reset doseerror.prior = Distributions.Beta{Float64}(α=1.0, β=33.2)
+chr=chr01, keep allelicbias.prior = Distributions.LogNormal{Float64}(μ=0.0, σ=1.0)
+chr=chr01, reset overdispersion.prior = Distributions.Exponential{Float64}(θ=0.05)
+chr=chr01, it=0, <doseerror>=0.0292, <allelicbias>=1.0, <overdispersion>=0.006, len=109.7cM, logl=-378315.4
+chr=chr01, it=1, <doseerror>=0.0114, <allelicbias>=1.01, <overdispersion>=0.006, #del_err=18, #correct=1(rejected), len=147.8cM, logl=-306178.3, tused=41.6s
+chr=chr01, it=2, <doseerror>=0.0054, <allelicbias>=1.01, <overdispersion>=0.006, #del_err=7, #correct=1(rejected), len=118.6cM, logl=-286814.8, tused=33.3s
+chr=chr01, it=3, <doseerror>=0.0052, <allelicbias>=1.01, <overdispersion>=0.006, #del_err=0, len=123.9cM, logl=-286800.2, tused=28.4s
+chr=chr01, it=4, <doseerror>=0.0052, <allelicbias>=1.01, <overdispersion>=0.006, #del_err=0, len=122.6cM, logl=-286797.9, tused=28.8s
+chr=chr01, it=5, <doseerror>=0.0052, <allelicbias>=1.01, <overdispersion>=0.006, #del_err=0, len=122.9cM, logl=-286797.3, tused=26.1s
+chr=chr01, #seg=97, no distance rescaling by skeleton markers
+chr=chr01, done, elapsed=164.0seconds, len=122.9cM, #marker=116
+chr=chr02, reset doseerror.prior = Distributions.Beta{Float64}(α=1.0, β=32.9)
+chr=chr02, keep allelicbias.prior = Distributions.LogNormal{Float64}(μ=0.0, σ=1.0)
+chr=chr02, reset overdispersion.prior = Distributions.Exponential{Float64}(θ=0.05)
+chr=chr02, it=0, <doseerror>=0.0295, <allelicbias>=0.98, <overdispersion>=0.007, len=42.7cM, logl=-327199.6
+chr=chr02, it=1, <doseerror>=0.0236, <allelicbias>=0.98, <overdispersion>=0.008, #del_err=5, #correct=2(rejected), len=114.1cM, logl=-302413.7, tused=37.3s
+chr=chr02, it=2, <doseerror>=0.0097, <allelicbias>=0.98, <overdispersion>=0.007, #del_err=11, #correct=0, len=78.1cM, logl=-268542.5, tused=30.3s
+chr=chr02, it=3, <doseerror>=0.0075, <allelicbias>=0.98, <overdispersion>=0.007, #del_err=5, len=87.0cM, logl=-254594.1, tused=26.1s
+chr=chr02, it=4, <doseerror>=0.0074, <allelicbias>=0.98, <overdispersion>=0.007, #del_err=0, len=84.0cM, logl=-254589.2, tused=24.9s
+chr=chr02, it=5, <doseerror>=0.0074, <allelicbias>=0.98, <overdispersion>=0.007, #del_err=0, len=85.0cM, logl=-254589.2, tused=25.3s
+chr=chr02, #seg=82, no distance rescaling by skeleton markers
+chr=chr02, done, elapsed=149.0seconds, len=85.0cM, #marker=104
+tused=169.0s for all chromosomes
+delete 46 out of 266 markers: PotVar0001550, PotVar0001710, PotVar0002196, PotVar0002940, PotVar0006050, PotVar0006435, PotVar0006452, PotVar0009567, PotVar0010102, PotVar0029221, PotVar0038422, PotVar0038537, PotVar0038755, PotVar0043814, PotVar0045428, PotVar0046249, PotVar0062231, PotVar0088884, PotVar0095162, PotVar0098430, PotVar0098536, PotVar0099900, PotVar0118890, PotVar0118901, PotVar0120822, PotVar0123980, PotVar0126039, PotVar0127072, solcap_snp_c1_12386, solcap_snp_c1_13290, solcap_snp_c1_14280, solcap_snp_c1_14419, solcap_snp_c1_14931, solcap_snp_c1_2562, solcap_snp_c1_3851, solcap_snp_c1_5286, solcap_snp_c1_5477, solcap_snp_c1_568, solcap_snp_c1_7346, solcap_snp_c2_14397, solcap_snp_c2_19670, solcap_snp_c2_2364, solcap_snp_c2_31824, solcap_snp_c2_4661, solcap_snp_c2_49619, solcap_snp_c2_57373
+#pop=27, #founder=10, #midparent=6, #offspring=730, #chr=2, #marker=220, genolen=207.9cM, physlen=121.9Mbp
+refined genofile: potato4x_out_maprefined.vcf.gz
+mapcomp file: potato4x_out_plots\potato4x_out_polyrefine_mapcomp.png
+End, 2026-11-08T22:09:28, tused = 177.0 seconds by polyrefine!
+----------------------------------------------------------------------------
+------------------------------polyreconstruct!------------------------------
+list of option values: 
+doseerror = 0.01
+baseerror = 0.001
+chrpairing = 44
+chrsubset = all chromosomes
+markersubset = all markers
+bindis = 0.001cM
+iscorrectparent = true
+isimputefirst = true (reconstruct using imputed offspring)
+isparallel = nothing
+isparallelind = nothing
+missingstring = NA
+isplot = true
+nplot_subpop = 1
+tukeyfence = 3
+samplesize = 1000
+trueorigfile = nothing
+outstem = potato4x_out
+outext = .vcf.gz
+logfile = IOStream(<file c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato4x_ped\potato4x_out.log>)
+workdir = c:\Users\zheng026\OneDrive - Wageningen University & Research\Chaozhi\Workspace\JuliaWorkspace\Workspace_PolyOrigin2\PolyOrigin2_Examples\real_potato4x_ped
+tempdirectory = C:\Users\zheng026\AppData\Local\Temp
+verbose = true
+#pop=27, #founder=10, #midparent=6, #offspring=730, #chr=2, #marker=220, genolen=207.9cM, physlen=121.9Mbp
+reset isparallel=true
+reset isparallelind=false
+chr=chr01, #markers=116, <doseerror>=0.0052, <allelicbias>=1.01, <overdispersion>=0.006, baseerror=0.001, tused=27.3s, #correct=1(rejected)
+chr=chr01, #markers=116, midparent decoding, tused=0.6s
+chr=chr02, #markers=104, <doseerror>=0.0074, <allelicbias>=0.98, <overdispersion>=0.007, baseerror=0.001, tused=20.3s, #correct=0
+chr=chr02, #markers=104, midparent decoding, tused=0.7s
+tused=32.0s for all 2 chromosomes
+imputed genofile: potato4x_out_imputed.vcf.gz
+no outlier offspring
+phased genofile: potato4x_out_phased.vcf.gz
+valentsummary file: potato4x_out_chrpairing.csv
+valentformation plot: potato4x_out_valent_formation.png
+valentfreq plot: potato4x_out_valent_freq.png
+prefpairing plot: potato4x_out_valent_prefpairing.png
+double reduction plot: potato4x_out_valent_DR.png
+nrecom file: potato4x_out_nrecom.csv
+posterior_nrecom plot: potato4x_out_posterior_nrecom.png
+polyancestry file: potato4x_out_polyancestry.csv.gz
+it might take a while to produce joinedancestry!
+tused = 93.2s
+joinedancestry file: potato4x_out_joinedancestry.csv.gz
+End, 2026-11-08T22:13:24, tused = 233.4 seconds by polyreconstruct!
+----------------------------------------------------------------------------
+tarplotfile: potato4x_out_plots.tar
+End, 2026-11-08T22:13:24, tused = 1627.5 seconds by polyorigin!
+============================================================================
+End, 2026-11-08T22:13:24, tused = 1642.5 seconds by polyorigin
+≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
