@@ -1,5 +1,5 @@
 ---
-title: "Haplotype reconstruction for a real potato pedigree"
+title: "Haplotype reconstruction for a real tetraploid potato pedigree"
 author: "Chaozhi Zheng"
 ---
 
