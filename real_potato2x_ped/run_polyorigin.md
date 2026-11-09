@@ -16,7 +16,7 @@ where the caret(`^`) is a multi-line character for Windows CMD, and the backslas
 
 By default, `polyorigin` analyzes all chromosomes (`chrsubset` is nothing).  Here parallel computation consists of 6 workers: by default, 3 phasing runs for each of two specified chromosomes. If `nworker` == 1, non-parallel computation. 
 
-[Click to view the cmd file](run_polyorigin.comd)
+[Click to view the cmd file](run_polyorigin.cmd)
 
 # Help
 
